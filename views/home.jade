@@ -1,0 +1,44 @@
+doctype html
+head
+    title File Metadata Microservice
+    |      
+    meta(name='description', content='FCC API project No. 5')
+    |     
+    link#favicon(rel='icon', href='https://glitch.com/edit/favicon-app.ico', type='image/x-icon')
+    |     
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    link(rel='stylesheet', href='/style.css')
+  body
+    .container
+      header
+        h3
+          a(href='https://freecodecamp.com', target='blank') Free Code Camp
+          |  File Metadata Microservice
+        |       
+        h2
+          | Backend API Project No. 5 by Franklin Griffin
+        h4
+          | Get size of File
+        |  
+      form(action='/upload', method='post', enctype='multipart/form-data')
+        label#label1(for='file') Please select file to upload:
+        | 
+        input#input1(type='file', name='upfile')
+        | 
+        input#input2(type='submit', value='Upload', disabled) 
+  script.
+      document.getElementById("input1").addEventListener("change", enableSubmit);
+      function enableSubmit() {
+      var x = document.getElementById("input2");
+      x.disabled= false;
+      }
+        
+      
+      
+       
+       
